@@ -1,4 +1,6 @@
-FROM icr.io/appc-dev/ace-server@sha256:c58fc5a0975314e6a8e72f2780163af38465e6123e3902c118d8e24e798b7b01
+FROM image-registry.openshift-image-registry.svc:5000/default/ace-full:12.0.2.0-ubuntu
+#FROM icr.io/appc-dev/ace-server@sha256:c58fc5a0975314e6a8e72f2780163af38465e6123e3902c118d8e24e798b7b01
+
 COPY bars /home/aceuser/bars
 USER 0
 RUN bash -c "cd /home/aceuser \ 
